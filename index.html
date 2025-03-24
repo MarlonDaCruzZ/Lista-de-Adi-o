@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Orçamento</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Lista de Orçamento</h1>
+
+      <!--Entrada do orçamento-->
+      <div class="form-group">
+        <label for="orcamentoTotal">Digite o valor do orçamento</label>
+        <input type="number" id="orcamentoTotal" placeholder="R$ 1000" />
+      </div>
+
+      <!-- Entrada de itens e valores -->
+      <div class="form-group">
+        <label for="itemInserido">Item</label>
+        <input type="text" id="itemInserido" />
+
+        <label for="valorItem">Valor</label>
+        <input type="number" id="valorItem" />
+      </div>
+
+      <button onclick="adicionarItem()" id="btn-adicionar">
+        Adicionar Item
+      </button>
+
+      <section>
+        <ul id="listaItens"></ul>
+      </section>
+
+      <h2 id="saldoRestante"></h2>
+    </main>
+  </body>
+
+  <script src="script.js"></script>
+</html>
