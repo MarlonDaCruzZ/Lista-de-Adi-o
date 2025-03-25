@@ -47,8 +47,14 @@ function atualizarLista(item, gasto, id) {
 }
 
 function removerItem(id) {
-  // Remover item da listaItens
+  const itemRemovido = listaItens[id]
+
+  //remover o item da lista
   listaItens = listaItens.filter((_, index) => index !== id)
+
+  //atualizar o saldo restante
+  totalGasto -= itemRemovido.gasto
+  document.getElementById("saldoRestante").textContent = `Saldo Restante: ${totalGasto}`
 
   // Atualizar a lista na página
   const lista = document.getElementById("listaItens")
